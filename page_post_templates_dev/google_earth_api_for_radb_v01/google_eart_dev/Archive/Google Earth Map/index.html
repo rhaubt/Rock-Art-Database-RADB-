@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<style>
+body {color:white;}
+</style>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="java.js"></script>
+<!--Day/Night Button-->
+<script type="text/javascript">
+      function addSampleButton(caption, clickHandler) {
+        var btn = document.createElement('input');
+        btn.type = 'button';
+        btn.value = caption;
+        
+        if (btn.attachEvent)
+          btn.attachEvent('onclick', clickHandler);
+        else
+          btn.addEventListener('click', clickHandler, false);
+
+        // add the button to the Sample UI
+        document.getElementById('sample-ui').appendChild(btn);
+      }
+      
+      function addSampleUIHtml(html) {
+        document.getElementById('sample-ui').innerHTML += html;
+      }
+    </script>
+</head>
+<body>
+
+<table bgcolor="#111111" width="100%" height="50px">
+	<tr>
+		<td>About
+		</td>
+		<td>Rock Art Search
+		</td>
+		<td>New and Upcoming Events
+		</td>
+		<td>Partnerships
+		</td>
+		<td>Publications
+		</td>
+		<td>Contact
+		</td>
+	</tr>
+</table>
+
+<table>
+	<tr bgcolor="#1c1c1c">
+		<td width="100%">tools menu
+		</td>
+		<td>
+			<!--Day/Night Button-->
+			<div id="sample-ui"></div>
+		</td>
+		<td>
+			<input type="text" id="address" onkeypress="keyPress()">
+		</td>
+		<td><input type="button" value="Geodode" onclick="submit()">
+		</td>
+	</tr>
+</table>
+
+<table width="100%" height="100%">
+	<tr>
+		<td width="15%" bgcolor="#323232">account box
+		</td>
+		<td width="62%"><div id="map3d"></div>	
+		</td>
+		<td width="23%" bgcolor="#323232">search / data box
+		</td>
+	<tr>
+</table>
+
+<table width="100%" height="50px">
+	<tr>
+		<td  bgcolor="#1e1e1e">footer menu
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html> 
